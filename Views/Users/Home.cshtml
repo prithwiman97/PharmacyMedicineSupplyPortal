@@ -1,0 +1,16 @@
+﻿@model string
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Home Page</h1>
+
+<form action="/Schedule/GetSchedule" method="post">
+    <div class="form-group">
+        <input type="hidden" name="Token" value="@Model" />
+        <label for="FromDate">Enter Start Date:</label>
+        <input type="date" id="FromDate" name="FromDate" class="form-control" />
+        <input type="submit" value="View Schedule" class="btn btn-success" />
+    </div>
+</form>
